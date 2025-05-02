@@ -1,0 +1,23 @@
+presets:
+  - name: "enable-ingress"
+    displayName: "Enable"
+    group: "Ingress"
+    remove: []
+    add: |
+      charts:
+        weatherforecast-api:
+          service:
+            type: ClusterIP
+          ingress:
+            enabled: true
+  - name: "disable-ingress"
+    displayName: "Disable"
+    group: "Ingress"
+    remove: []
+    add: |
+      charts:
+        weatherforecast-api:
+          service:
+            type: LoadBalancer
+          ingress:
+            enabled: false

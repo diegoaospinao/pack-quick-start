@@ -1,11 +1,3 @@
-# get helm from the chart (azure)
+# building pack
 
-helm registry login $ACR_NAME.azurecr.io --username $USER_NAME --password $PASSWORD
-
-helm pull oci://$ACR_NAME.azurecr.io/helm/$HELM_NAME --version $HELM_VERSION
-
-# push pack to the registry (azure)
-
-az acr login -n $REGISTRY  
-
-oras push $REGISTRY/spectro-packs/archive/$PACK-NAME:$PACK-VERSION $ARTIFACT.tar.gz
+Go to https://synchronet.atlassian.net/wiki/spaces/SCSP/pages/3718381573/weatherforecast-api

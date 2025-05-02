@@ -1,0 +1,9 @@
+charts.weatherforecast-api.replicaCount:
+    # The number of replicas of the api to be created.
+    # The replicas should be specified as a number.
+    schema: '{{ required | format "${number}" | hints "Enter the number of replicas of the api."}}'
+
+charts.weatherforecast-api.image.repository:
+    # The api image.
+    # Ensure that the image follows the required format: registry/repository:version.
+    schema: '{{ required | format "${string}" | hints "Enter the api image. Ensure that it follows the required format: registry/repository:version." }}'
